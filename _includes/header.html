@@ -14,11 +14,11 @@
         <label for="nav-trigger">
           <span class="menu-icon">
               <svg class="svg-icon"><use xlink:href="{{ 'assets/minima-social-icons.svg#menuicon' | relative_url }}"></use></svg>
-          </span> 
+          </span>
         </label>
 
         <div class="trigger">
-            <a class="page-link" href="{{ '/' | relative_url }}">WORK.</a>
+            <a class="page-link" href="{{ '/' | relative_url }}">WORK</a>
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title and my_page.header -%}

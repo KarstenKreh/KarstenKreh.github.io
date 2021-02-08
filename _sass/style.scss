@@ -1,13 +1,14 @@
 @charset "utf-8";
 
 
-$background:     #1D1D1D;
-$font-color:     #FFF;
-$primary-color:  #9C0000;
-$grey:           #292929;
-$primary-font:   "Red Hat Display";
-$secondary-font: "Red Hat Text";
-
+$background:            #1D1D1D;
+$font-primary-color:    #FFF;
+$font-secondary-color:  #808080;
+$primary-color:         #9C0000;
+$grey:                  #292929;
+$primary-font:          "Red Hat Display";
+$secondary-font:        "Red Hat Text";
+$wrapper-maxwidth:      1080px;
 
 
 
@@ -29,8 +30,6 @@ a {
   line-height: 0.92;
   letter-spacing: normal;
   text-align: left;
-  color: $font-color;
-
 }
 
 
@@ -43,7 +42,6 @@ h1 {
   line-height: 0.92;
   letter-spacing: normal;
   text-align: left;
-  color: $font-color;
 }
 
 
@@ -56,12 +54,11 @@ h2 {
   line-height: 1.27;
   letter-spacing: normal;
   text-align: left;
-  color: $font-color;
 }
 
 
 h4 {
-  font-family: FuturaPT;
+  font-family: $primary-font;
   font-size: 20px;
   font-weight: 500;
   font-stretch: normal;
@@ -69,14 +66,13 @@ h4 {
   line-height: 1.33;
   letter-spacing: normal;
   text-align: left;
-  color: $font-color;
 }
 
 
 p {
-  font-family: $primary-font;
+  font-family: $secondary-font;
   font-size: 1.8vw;
-  font-weight: normal;
+  font-weight: 200;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.33;
@@ -89,19 +85,18 @@ p {
 
 body {
     background: $background;
-    color: $font-color;
+    color: $font-primary-color;
 }
 
 .wrapper {
-    max-width: -webkit-calc(800px);
-    max-width: calc(1080px);
+    max-width: $wrapper-maxwidth;
     margin-right: auto;
     margin-left: auto;
     }
 
 
-.post-thumbnail {
-    max-width: calc(100% - 64px);
+img {
+    width: calc(100% - 64px);
     border-radius: 8px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -110,7 +105,9 @@ body {
 
 
 .home-listitem:hover
-.post-thumbnail {
+img,
+img:hover
+ {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
 
@@ -132,19 +129,39 @@ ul {
 
 
 .site-header {
-    min-height: 55.95px;
-    line-height: 54px;
+    background-color: #101010;
+    top: 0;
+    height: 146px;
     position: fixed;
     font-family: $secondary-font;
     right: 0;
     left: 0;
-    top: 50px;
+    z-index: 42069;
+
+
+    .site-nav{
+      height: 100%;
+    }
+
+
+    .wrapper{
+      height: 100%;
+    }
+
+
+    .trigger{
+      height: 100%;
+      display: flex;
+    }
+
 
 
     a {
-        color: $font-color;
         font-size: 20px;
-        letter-spacing: 0.3em
+        letter-spacing: 0.3em;
+        height: 100%;
+        align-items: center;
+        display: flex;
     }
 }
 
@@ -185,8 +202,9 @@ ul {
 
 
 .page-link, .menu-icon {
+    color: $font-secondary-color;
     margin-left: 100px;
-    transition: color 2s;
+    transition: color 0.4s;
 
 }
 
@@ -194,8 +212,8 @@ ul {
 
 .page-link:hover, .menu-icon:hover {
     margin-left: 100px;
-    color: $primary-color;
-    transition: 0.5s;
+    color: white;
+    transition: 0.4s;
 }
 
 
@@ -204,7 +222,7 @@ ul {
     padding: 10px 40px 10px 40px;
     float: right;
     border-radius: 10px;
-    border-bottom-color: $font-color;
+    border-bottom-color: $font-primary-color;
     background-color: transparent;
     font-family: $secondary-font;
     font-size: 30px;
@@ -214,7 +232,7 @@ ul {
     line-height: 1.33;
     letter-spacing: normal;
     text-align: left;
-    color: $font-color;
+    color: $font-primary-color;
     margin-right: 10px;
 }
 
@@ -222,7 +240,7 @@ ul {
 
 textarea, input {
     background: transparent;
-    color: $font-color;
+    color: $font-primary-color;
     font-family: $primary-font;
     font-size: 30px;
     font-weight: bold;
@@ -231,7 +249,7 @@ textarea, input {
     line-height: 1.27;
     letter-spacing: normal;
     text-align: left;
-    color: $font-color;
+    color: $font-primary-color;
     padding: 20px;
     margin: 10px;
     margin-left: 0;
@@ -240,15 +258,15 @@ textarea, input {
     width: 793px;
 
     &::-webkit-input-placeholder { /* Edge */
-        color: $font-color;
+        color: $font-primary-color;
     }
 
     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: $font-color;
+        color: $font-primary-color;
     }
 
     &::placeholder {
-        color: $font-color;
+        color: $font-primary-color;
     }
 }
 
@@ -283,8 +301,9 @@ form, fieldset {
     line-height: 0.92;
     letter-spacing: normal;
     text-align: left;
-    color: $font-color;
-    transition: color 1.0s;
+    color: $background;
+    -webkit-text-stroke: 1.5px $font-primary-color;
+    transition: color 0.4s;
 }
 
 
@@ -299,8 +318,7 @@ form, fieldset {
     line-height: 0.92;
     letter-spacing: normal;
     text-align: left;
-    color: $primary-color;
-    transition: color 0.5s;
+    color: white;
 }
 
 
@@ -328,7 +346,7 @@ form, fieldset {
     line-height: 0.92;
     letter-spacing: normal;
     text-align: left;
-    color: $font-color;
+    color: $font-primary-color;
     margin: 300px 0 0 0;
     max-width: 100%;
   }
@@ -343,6 +361,19 @@ form, fieldset {
 
 .dt-published {
     display: none;
+}
+
+
+
+.escape-wrapper{
+    width: 100vw;
+    margin-left: calc( (#{$wrapper-maxwidth} - 100vw) / 2 );
+}
+
+
+
+.post-img{
+  margin-bottom: 128px;
 }
 
 
@@ -394,6 +425,7 @@ svg.svg-icon {
 
 .logo-img {
     max-width: 100%;
+    border-radius: 0;
 }
 
 
@@ -507,9 +539,10 @@ svg.svg-icon {
       transform: rotate(-90deg);
       position: absolute;
       margin: auto;
-      top: 9px;
+      top: 12px;
       right: -9px;
       text-align: right;
+      letter-spacing: 0.2em;
     }
 
 
