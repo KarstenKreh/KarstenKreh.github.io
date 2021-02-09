@@ -35,11 +35,11 @@ a {
 
 h1 {
   font-family: $primary-font;
-  font-size: 6.5vw;
+  font-size: 5.8vw;
   font-weight: 800;
   font-stretch: normal;
   font-style: normal;
-  line-height: 0.92;
+  line-height: 1.2;
   letter-spacing: normal;
   text-align: left;
 }
@@ -59,7 +59,7 @@ h2 {
 
 h4 {
   font-family: $primary-font;
-  font-size: 20px;
+  font-size: 1.8vw;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -129,9 +129,10 @@ ul {
 
 
 .site-header {
-    background-color: #101010;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(32px);
     top: 0;
-    height: 146px;
+    height: 124px;
     position: fixed;
     font-family: $secondary-font;
     right: 0;
@@ -379,9 +380,16 @@ form, fieldset {
 
 
 .post-content-text{
-    margin: 20px 0 80px 0;
+    margin: 16px 0 128px 0;
     width: 65%;
-    margin-left: 300px
+    margin-left: 300px;
+}
+
+
+.post-content-title{
+    margin: 16px 0 48px 0;
+    width: 65%;
+    margin-left: 300px;
 }
 
 
@@ -466,7 +474,25 @@ svg.svg-icon {
         padding-right: 1vh;
         margin-left: 0;
         font-size: 2.2vw;
+        width: 80%;
     }
+
+    .post-content-title, p {
+        padding-left: 1vh;
+        padding-right: 1vh;
+        margin-left: 0;
+        font-size: 2.2vw;
+        width: 80%;
+    }
+}
+
+
+
+.p-name {
+  font-family: $secondary-font;
+  font-size: 1.8vw;
+  margin-top: 256px;
+  font-weight: 200;
 }
 
 
@@ -507,8 +533,12 @@ svg.svg-icon {
     }
 
     .post-content-text, p {
-        width: 60%;
+        width: 100%;
         font-size: 3vw;
+    }
+    .post-content-title, p {
+        font-size: 3vw;
+        width: 100%;
     }
 }
 
@@ -532,6 +562,11 @@ svg.svg-icon {
         width: 100%;
         font-size: 4vw;
     }
+
+    .post-content-title, p {
+        width: 100%;
+        font-size: 4vw;
+    }
 }
 
 
@@ -539,7 +574,7 @@ svg.svg-icon {
       transform: rotate(-90deg);
       position: absolute;
       margin: auto;
-      top: 12px;
+      top: 21px;
       right: -9px;
       text-align: right;
       letter-spacing: 0.2em;
