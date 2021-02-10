@@ -21,6 +21,8 @@ a {
     text-decoration: none;
 }
 
+
+
 .h0 {
   font-family: $primary-font;
   font-size: 10vw;
@@ -33,9 +35,10 @@ a {
 }
 
 
+
 h1 {
   font-family: $primary-font;
-  font-size: 5.8vw;
+  font-size: 5.5vw;
   font-weight: 800;
   font-stretch: normal;
   font-style: normal;
@@ -43,6 +46,7 @@ h1 {
   letter-spacing: normal;
   text-align: left;
 }
+
 
 
 h2 {
@@ -57,6 +61,7 @@ h2 {
 }
 
 
+
 h4 {
   font-family: $primary-font;
   font-size: 1.8vw;
@@ -67,6 +72,7 @@ h4 {
   letter-spacing: normal;
   text-align: left;
 }
+
 
 
 p {
@@ -88,6 +94,8 @@ body {
     color: $font-primary-color;
 }
 
+
+
 .wrapper {
     max-width: $wrapper-maxwidth;
     margin-right: auto;
@@ -95,12 +103,25 @@ body {
     }
 
 
+
 img {
-    width: calc(100% - 64px);
+    width: calc(100% - 8vw);
     border-radius: 8px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: filter .4s ease-in-out;
+}
+
+
+
+.img-about{
+    max-width: 25vw;
+}
+
+
+
+.home-post-title {
+    margin-top: 2vw;
 }
 
 
@@ -158,7 +179,7 @@ ul {
 
 
     a {
-        font-size: 20px;
+        font-family: $primary-font;
         letter-spacing: 0.3em;
         height: 100%;
         align-items: center;
@@ -432,6 +453,7 @@ svg.svg-icon {
 
 
 .logo-img {
+    width: 6rem;
     max-width: 100%;
     border-radius: 0;
 }
@@ -489,10 +511,10 @@ svg.svg-icon {
 
 
 .p-name {
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: 1.8vw;
   margin-top: 256px;
-  font-weight: 200;
+  font-weight: 800;
 }
 
 
@@ -574,7 +596,7 @@ svg.svg-icon {
       transform: rotate(-90deg);
       position: absolute;
       margin: auto;
-      top: 21px;
+      top: 1.3vw;
       right: -9px;
       text-align: right;
       letter-spacing: 0.2em;
