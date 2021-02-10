@@ -28,13 +28,12 @@ layout: default
             </div>
 
 
-                <h1 class= "home-post-title">{{ post.title | escape }}
-                </h1>
+                <h2 class= "home-post-name">{{ post.title | escape }}
+                </h2>
 
                 {%- if site.show_excerpts -%}
                 {{ post.excerpt }}
                 {%- endif -%}
-
 
 
           </a>
