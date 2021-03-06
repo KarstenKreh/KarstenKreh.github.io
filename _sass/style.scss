@@ -78,7 +78,7 @@ h4 {
 p {
   font-family: $secondary-font;
   font-size: 1.8vw;
-  font-weight: 200;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.33;
@@ -92,6 +92,8 @@ p {
 body {
     background: $background;
     color: $font-primary-color;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 
@@ -387,15 +389,16 @@ form, fieldset {
 
 
 
-.escape-wrapper{
-    width: 100vw;
-    margin-left: calc( (#{$wrapper-maxwidth} - 100vw) / 2 );
+.post-img{
+  margin-bottom: 128px;
+  width: 100%;
 }
 
 
 
-.post-img{
-  margin-bottom: 128px;
+.escape-wrapper{
+    width: 100vw;
+    margin-left: calc( (#{$wrapper-maxwidth} - 100vw) / 2 );
 }
 
 
